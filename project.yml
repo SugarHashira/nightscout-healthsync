@@ -15,11 +15,6 @@ settings:
     CODE_SIGNING_REQUIRED: "NO"
     CODE_SIGNING_ALLOWED: "NO"
 
-packages:
-  NightscoutKit:
-    url: https://github.com/mpangburn/NightscoutKit.git
-    from: "0.5.0"
-
 targets:
   NightscoutHealthSync:
     type: application
@@ -36,8 +31,6 @@ targets:
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
         ENABLE_PREVIEWS: YES
-    dependencies:
-      - package: NightscoutKit
     entitlements:
       path: Resources/NightscoutHealthSync.entitlements
       properties:

@@ -13,7 +13,6 @@
 		719729CEEDDE49404E11A760 /* NightscoutTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95F991ECBF4A7DB644023D /* NightscoutTreatment.swift */; };
 		835226529939BA1FC096D927 /* NightscoutProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515A8E4E670745DE468140DD /* NightscoutProfile.swift */; };
 		939ECC7EDF23933B9659C032 /* HealthKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B68DBD741E8FF762D007B9 /* HealthKitService.swift */; };
-		A95BEB6E22EBBE392E7528D9 /* NightscoutKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7582DEE3A4F951C196C13BC4 /* NightscoutKit */; };
 		B8B558DA6492888AE6A2D492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B23C85692D97322CEFFCC45 /* AppDelegate.swift */; };
 		CED5249AA5686A6E8ECBEDA9 /* NightscoutHealthSyncApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F60B0EFC19D9EBC29E9463C /* NightscoutHealthSyncApp.swift */; };
 		DCC6E747CAF206047944CF7B /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B322BFB314FBBD8949C9EB71 /* UserSettings.swift */; };
@@ -35,17 +34,6 @@
 		B322BFB314FBBD8949C9EB71 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		FA6CFB1EBBAD35978B578BC1 /* GlucoseEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		363E19F2585064F369F5A479 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A95BEB6E22EBBE392E7528D9 /* NightscoutKit in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		2177DE1C8EF30F46CF147333 /* Views */ = {
@@ -130,7 +118,6 @@
 			buildConfigurationList = B93381271B961651CA2A9F19 /* Build configuration list for PBXNativeTarget "NightscoutHealthSync" */;
 			buildPhases = (
 				310A2B6C2A614FECBD8AFB4D /* Sources */,
-				363E19F2585064F369F5A479 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,7 +125,6 @@
 			);
 			name = NightscoutHealthSync;
 			packageProductDependencies = (
-				7582DEE3A4F951C196C13BC4 /* NightscoutKit */,
 			);
 			productName = NightscoutHealthSync;
 			productReference = 147EEDC0C7FDF3E10BDF1229 /* NightscoutHealthSync.app */;
@@ -167,9 +153,6 @@
 			);
 			mainGroup = 5CA5DEFF60AF551DA5A09460;
 			minimizedProjectReferenceProxies = 1;
-			packageReferences = (
-				EA5DF82AC30CA4E24B599876 /* XCRemoteSwiftPackageReference "NightscoutKit" */,
-			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4D16F5624FE9B1A060DD9FE9 /* Products */;
 			projectDirPath = "";
@@ -391,25 +374,6 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		EA5DF82AC30CA4E24B599876 /* XCRemoteSwiftPackageReference "NightscoutKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mpangburn/NightscoutKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.5.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		7582DEE3A4F951C196C13BC4 /* NightscoutKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EA5DF82AC30CA4E24B599876 /* XCRemoteSwiftPackageReference "NightscoutKit" */;
-			productName = NightscoutKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8FA7E19C7F1F9C728BA2295C /* Project object */;
 }
