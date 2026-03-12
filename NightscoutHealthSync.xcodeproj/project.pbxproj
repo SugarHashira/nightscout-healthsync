@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42204F9193867A7B933527BA /* SyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BA04AE0311BCC0171ABB72 /* SyncService.swift */; };
+		60EC387E0E6D618A97129FCC /* SyncViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7523BDC1124EDA6E28B8AC92 /* SyncViewModel.swift */; };
+		670E74C21FD039410967DB43 /* NightscoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701783BD524BF81D745149BE /* NightscoutService.swift */; };
+		719729CEEDDE49404E11A760 /* NightscoutTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95F991ECBF4A7DB644023D /* NightscoutTreatment.swift */; };
+		835226529939BA1FC096D927 /* NightscoutProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515A8E4E670745DE468140DD /* NightscoutProfile.swift */; };
+		939ECC7EDF23933B9659C032 /* HealthKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B68DBD741E8FF762D007B9 /* HealthKitService.swift */; };
+		A95BEB6E22EBBE392E7528D9 /* NightscoutKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7582DEE3A4F951C196C13BC4 /* NightscoutKit */; };
+		B8B558DA6492888AE6A2D492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B23C85692D97322CEFFCC45 /* AppDelegate.swift */; };
+		CED5249AA5686A6E8ECBEDA9 /* NightscoutHealthSyncApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F60B0EFC19D9EBC29E9463C /* NightscoutHealthSyncApp.swift */; };
+		DCC6E747CAF206047944CF7B /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B322BFB314FBBD8949C9EB71 /* UserSettings.swift */; };
+		E67A18DBEA873662E77E8D9D /* GlucoseEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6CFB1EBBAD35978B578BC1 /* GlucoseEntry.swift */; };
+		E92163918EAA4FC91A6C5B68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A802251A99039903EE10439 /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		10B68DBD741E8FF762D007B9 /* HealthKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitService.swift; sourceTree = "<group>"; };
+		147EEDC0C7FDF3E10BDF1229 /* NightscoutHealthSync.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = NightscoutHealthSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F60B0EFC19D9EBC29E9463C /* NightscoutHealthSyncApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightscoutHealthSyncApp.swift; sourceTree = "<group>"; };
+		515A8E4E670745DE468140DD /* NightscoutProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightscoutProfile.swift; sourceTree = "<group>"; };
+		6B23C85692D97322CEFFCC45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		701783BD524BF81D745149BE /* NightscoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightscoutService.swift; sourceTree = "<group>"; };
+		7523BDC1124EDA6E28B8AC92 /* SyncViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncViewModel.swift; sourceTree = "<group>"; };
+		87BA04AE0311BCC0171ABB72 /* SyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncService.swift; sourceTree = "<group>"; };
+		8D95F991ECBF4A7DB644023D /* NightscoutTreatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightscoutTreatment.swift; sourceTree = "<group>"; };
+		9A802251A99039903EE10439 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B322BFB314FBBD8949C9EB71 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		FA6CFB1EBBAD35978B578BC1 /* GlucoseEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseEntry.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		363E19F2585064F369F5A479 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A95BEB6E22EBBE392E7528D9 /* NightscoutKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2177DE1C8EF30F46CF147333 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9A802251A99039903EE10439 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2DDF6CF9B6D90760AE2FA09A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				10B68DBD741E8FF762D007B9 /* HealthKitService.swift */,
+				701783BD524BF81D745149BE /* NightscoutService.swift */,
+				87BA04AE0311BCC0171ABB72 /* SyncService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4D16F5624FE9B1A060DD9FE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				147EEDC0C7FDF3E10BDF1229 /* NightscoutHealthSync.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5CA5DEFF60AF551DA5A09460 = {
+			isa = PBXGroup;
+			children = (
+				DFB8EDDE8033BA1FEE9CA24B /* Sources */,
+				4D16F5624FE9B1A060DD9FE9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D265DBC3BCEFB9E4A08B112C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7523BDC1124EDA6E28B8AC92 /* SyncViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DFB8EDDE8033BA1FEE9CA24B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E9C09B3A45307262E147ED1F /* App */,
+				F2CA5B0A433E2B739E76FA42 /* Models */,
+				2DDF6CF9B6D90760AE2FA09A /* Services */,
+				D265DBC3BCEFB9E4A08B112C /* ViewModels */,
+				2177DE1C8EF30F46CF147333 /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		E9C09B3A45307262E147ED1F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6B23C85692D97322CEFFCC45 /* AppDelegate.swift */,
+				1F60B0EFC19D9EBC29E9463C /* NightscoutHealthSyncApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F2CA5B0A433E2B739E76FA42 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA6CFB1EBBAD35978B578BC1 /* GlucoseEntry.swift */,
+				515A8E4E670745DE468140DD /* NightscoutProfile.swift */,
+				8D95F991ECBF4A7DB644023D /* NightscoutTreatment.swift */,
+				B322BFB314FBBD8949C9EB71 /* UserSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E47D9F7E36B6B35B02D6D5B1 /* NightscoutHealthSync */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B93381271B961651CA2A9F19 /* Build configuration list for PBXNativeTarget "NightscoutHealthSync" */;
+			buildPhases = (
+				310A2B6C2A614FECBD8AFB4D /* Sources */,
+				363E19F2585064F369F5A479 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NightscoutHealthSync;
+			packageProductDependencies = (
+				7582DEE3A4F951C196C13BC4 /* NightscoutKit */,
+			);
+			productName = NightscoutHealthSync;
+			productReference = 147EEDC0C7FDF3E10BDF1229 /* NightscoutHealthSync.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8FA7E19C7F1F9C728BA2295C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					E47D9F7E36B6B35B02D6D5B1 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 666BDB15CBF399BB38C55FB4 /* Build configuration list for PBXProject "NightscoutHealthSync" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 5CA5DEFF60AF551DA5A09460;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				EA5DF82AC30CA4E24B599876 /* XCRemoteSwiftPackageReference "NightscoutKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4D16F5624FE9B1A060DD9FE9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E47D9F7E36B6B35B02D6D5B1 /* NightscoutHealthSync */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		310A2B6C2A614FECBD8AFB4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8B558DA6492888AE6A2D492 /* AppDelegate.swift in Sources */,
+				E92163918EAA4FC91A6C5B68 /* ContentView.swift in Sources */,
+				E67A18DBEA873662E77E8D9D /* GlucoseEntry.swift in Sources */,
+				939ECC7EDF23933B9659C032 /* HealthKitService.swift in Sources */,
+				CED5249AA5686A6E8ECBEDA9 /* NightscoutHealthSyncApp.swift in Sources */,
+				835226529939BA1FC096D927 /* NightscoutProfile.swift in Sources */,
+				670E74C21FD039410967DB43 /* NightscoutService.swift in Sources */,
+				719729CEEDDE49404E11A760 /* NightscoutTreatment.swift in Sources */,
+				42204F9193867A7B933527BA /* SyncService.swift in Sources */,
+				60EC387E0E6D618A97129FCC /* SyncViewModel.swift in Sources */,
+				DCC6E747CAF206047944CF7B /* UserSettings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4125515A3F49D246CA98B425 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		95E48F00D1B28E23F5CD93CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AAB277D5A8EE29BD8E0BB069 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Resources/NightscoutHealthSync.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.diyDiabetes.nightscout-healthsync";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E1C57C4633B4CAAE7684D411 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Resources/NightscoutHealthSync.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.diyDiabetes.nightscout-healthsync";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		666BDB15CBF399BB38C55FB4 /* Build configuration list for PBXProject "NightscoutHealthSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4125515A3F49D246CA98B425 /* Debug */,
+				95E48F00D1B28E23F5CD93CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B93381271B961651CA2A9F19 /* Build configuration list for PBXNativeTarget "NightscoutHealthSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1C57C4633B4CAAE7684D411 /* Debug */,
+				AAB277D5A8EE29BD8E0BB069 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA5DF82AC30CA4E24B599876 /* XCRemoteSwiftPackageReference "NightscoutKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mpangburn/NightscoutKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7582DEE3A4F951C196C13BC4 /* NightscoutKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA5DF82AC30CA4E24B599876 /* XCRemoteSwiftPackageReference "NightscoutKit" */;
+			productName = NightscoutKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8FA7E19C7F1F9C728BA2295C /* Project object */;
+}
