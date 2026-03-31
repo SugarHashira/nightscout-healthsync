@@ -13,6 +13,10 @@ class SyncViewModel: ObservableObject {
     @Published var nightscoutSecret: String = ""
     @Published var selectedGlucoseUnit: GlucoseUnit = .mgdl
     @Published var autoSyncEnabled: Bool = false
+    @Published var syncCarbs: Bool = true
+    @Published var syncInsulin: Bool = true
+    @Published var syncGlucose: Bool = true
+    @Published var backgroundSyncInterval: Int = 15
     
     private let settings = UserSettings.shared
     
@@ -27,15 +31,23 @@ class SyncViewModel: ObservableObject {
         nightscoutSecret = await settings.nightscoutAPISecret ?? ""
         selectedGlucoseUnit = await settings.glucoseUnit
         autoSyncEnabled = await settings.autoSyncEnabled
+        syncCarbs = await settings.syncCarbs
+        syncInsulin = await settings.syncInsulin
+        syncGlucose = await settings.syncGlucose
+        backgroundSyncInterval = await settings.backgroundSyncInterval
         lastSyncDate = await settings.lastSyncDate
         isConfigured = nightscoutURL.isEmpty == false && nightscoutSecret.isEmpty == false
     }
-    
+
     func saveSettings() async {
-        await settings.nightscoutURL = nightscoutURL
-        await settings.nightscoutAPISecret = nightscoutSecret
-        await settings.glucoseUnit = selectedGlucoseUnit
-        await settings.autoSyncEnabled = autoSyncEnabled
+        await settings.setNightscoutURL(nightscoutURL)
+        await settings.setNightscoutAPISecret(nightscoutSecret)
+        await settings.setGlucoseUnit(selectedGlucoseUnit)
+        await settings.setAutoSyncEnabled(autoSyncEnabled)
+        await settings.setSyncCarbs(syncCarbs)
+        await settings.setSyncInsulin(syncInsulin)
+        await settings.setSyncGlucose(syncGlucose)
+        await settings.setBackgroundSyncInterval(backgroundSyncInterval)
         isConfigured = nightscoutURL.isEmpty == false && nightscoutSecret.isEmpty == false
     }
     

@@ -140,8 +140,25 @@ struct SettingsView: View {
                     Text("mg/dL").tag(GlucoseUnit.mgdl)
                     Text("mmol/L").tag(GlucoseUnit.mmol)
                 }
-                
+
+                Toggle("Sync Glucose Readings", isOn: $viewModel.syncGlucose)
+                Toggle("Sync Insulin", isOn: $viewModel.syncInsulin)
+                Toggle("Sync Carbs", isOn: $viewModel.syncCarbs)
+            }
+
+            Section("Background Sync") {
                 Toggle("Auto-sync in background", isOn: $viewModel.autoSyncEnabled)
+
+                if viewModel.autoSyncEnabled {
+                    Picker("Sync every", selection: $viewModel.backgroundSyncInterval) {
+                        Text("5 minutes").tag(5)
+                        Text("10 minutes").tag(10)
+                        Text("15 minutes").tag(15)
+                        Text("30 minutes").tag(30)
+                        Text("1 hour").tag(60)
+                        Text("2 hours").tag(120)
+                    }
+                }
             }
             
             Section {

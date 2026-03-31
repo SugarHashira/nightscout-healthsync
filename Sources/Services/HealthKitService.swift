@@ -92,14 +92,14 @@ actor HealthKitService {
         
         let quantity = HKQuantity(unit: .internationalUnit(), doubleValue: units)
         
-        let reason: String = isBasal ? "HKInsulinDeliveryReasonBasal" : "HKInsulinDeliveryReasonBolus"
-        
+        let reason: HKInsulinDeliveryReason = isBasal ? .basal : .bolus
+
         let sample = HKQuantitySample(
             type: type,
             quantity: quantity,
             start: date,
             end: date,
-            metadata: ["HKInsulinDeliveryReason": reason]
+            metadata: [HKMetadataKeyInsulinDeliveryReason: reason.rawValue]
         )
         
         do {

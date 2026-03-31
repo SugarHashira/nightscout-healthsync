@@ -31,11 +31,11 @@ actor NightscoutService {
     
     static var shared: NightscoutService {
         get async throws {
-            let config = await UserSettings.shared
-            guard let url = config.nightscoutURL, !url.isEmpty else {
+            let config = UserSettings.shared
+            guard let url = await config.nightscoutURL, !url.isEmpty else {
                 throw NightscoutError.invalidURL
             }
-            guard let secret = config.nightscoutAPISecret, !secret.isEmpty else {
+            guard let secret = await config.nightscoutAPISecret, !secret.isEmpty else {
                 throw NightscoutError.invalidURL
             }
             return try NightscoutService(url: url, secret: secret)
@@ -58,7 +58,7 @@ actor NightscoutService {
     
     private func hashedSecret() -> String {
         let data = Data(apiSecret.utf8)
-        let hash = SHA1.hash(data: data)
+        let hash = Insecure.SHA1.hash(data: data)
         return hash.map { String(format: "%02x", $0) }.joined()
     }
     

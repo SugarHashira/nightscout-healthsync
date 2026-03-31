@@ -22,19 +22,21 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
     
     func scheduleBackgroundRefresh() {
-        let request = BGAppRefreshTaskRequest(identifier: Self.backgroundTaskIdentifier)
-        request.earliestBeginDate = Date(timeIntervalSinceNow: 15 * 60) // 15 minutes
-        
-        do {
-            try BGTaskScheduler.shared.submit(request)
-        } catch {
-            print("Failed to schedule background refresh: \(error)")
+        Task {
+            let interval = await UserSettings.shared.backgroundSyncInterval
+            let request = BGAppRefreshTaskRequest(identifier: Self.backgroundTaskIdentifier)
+            request.earliestBeginDate = Date(timeIntervalSinceNow: Double(interval) * 60)
+            do {
+                try BGTaskScheduler.shared.submit(request)
+            } catch {
+                print("Failed to schedule background refresh: \(error)")
+            }
         }
     }
     
     private func handleBackgroundRefresh(task: BGAppRefreshTask) {
         scheduleBackgroundRefresh() // Schedule next refresh
-        
+
         let syncTask = Task {
             do {
                 try await SyncService.shared.syncAll()
