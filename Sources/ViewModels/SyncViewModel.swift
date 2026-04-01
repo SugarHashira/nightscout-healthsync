@@ -17,6 +17,7 @@ class SyncViewModel: ObservableObject {
     @Published var syncInsulin: Bool = true
     @Published var syncGlucose: Bool = true
     @Published var backgroundSyncInterval: Int = 15
+    @Published var syncLogs: [SyncLog] = []
     
     private let settings = UserSettings.shared
     
@@ -36,6 +37,7 @@ class SyncViewModel: ObservableObject {
         syncGlucose = await settings.syncGlucose
         backgroundSyncInterval = await settings.backgroundSyncInterval
         lastSyncDate = await settings.lastSyncDate
+        syncLogs = await settings.syncLogs.reversed()
         isConfigured = nightscoutURL.isEmpty == false && nightscoutSecret.isEmpty == false
     }
 
@@ -63,6 +65,7 @@ class SyncViewModel: ObservableObject {
         do {
             syncResult = try await SyncService.shared.syncAll()
             lastSyncDate = await SyncService.shared.getLastSyncDate()
+            syncLogs = await settings.syncLogs.reversed()
         } catch {
             errorMessage = error.localizedDescription
         }

@@ -74,6 +74,9 @@ struct ContentView: View {
                     NavigationLink(destination: SettingsView()) {
                         Label("Nightscout Settings", systemImage: "gear")
                     }
+                    NavigationLink(destination: LogsView()) {
+                        Label("Sync Logs", systemImage: "list.bullet.rectangle")
+                    }
                 }
             }
             .navigationTitle("Nightscout Sync")
@@ -86,10 +89,12 @@ struct ContentView: View {
 
 struct SettingsView: View {
     @EnvironmentObject var viewModel: SyncViewModel
+    @Environment(\.dismiss) private var dismiss
     @State private var testingConnection = false
     @State private var connectionTestResult: Bool?
     @State private var showingHealthKitAlert = false
-    
+    @State private var showingSaved = false
+
     var body: some View {
         Form {
             Section("Nightscout") {
@@ -165,6 +170,9 @@ struct SettingsView: View {
                 Button("Save Settings") {
                     Task {
                         await viewModel.saveSettings()
+                        showingSaved = true
+                        try? await Task.sleep(for: .seconds(1))
+                        dismiss()
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -172,10 +180,81 @@ struct SettingsView: View {
             }
         }
         .navigationTitle("Settings")
+        .overlay(alignment: .bottom) {
+            if showingSaved {
+                Label("Settings saved", systemImage: "checkmark.circle.fill")
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 12)
+                    .background(.green, in: Capsule())
+                    .foregroundStyle(.white)
+                    .padding(.bottom, 24)
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+            }
+        }
+        .animation(.easeInOut(duration: 0.3), value: showingSaved)
         .alert("HealthKit", isPresented: $showingHealthKitAlert) {
             Button("OK", role: .cancel) { }
         } message: {
             Text("Authorization requested. Please allow access to Health data in Settings.")
         }
+    }
+}
+
+struct LogsView: View {
+    @EnvironmentObject var viewModel: SyncViewModel
+
+    var body: some View {
+        Group {
+            if viewModel.syncLogs.isEmpty {
+                VStack(spacing: 12) {
+                    Spacer()
+                    Image(systemName: "list.bullet.rectangle")
+                        .font(.system(size: 48))
+                        .foregroundStyle(.secondary)
+                    Text("No Logs Yet")
+                        .font(.headline)
+                    Text("Sync logs will appear here after your first sync.")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                        .multilineTextAlignment(.center)
+                    Spacer()
+                }
+                .padding()
+            } else {
+                List(viewModel.syncLogs) { log in
+                    VStack(alignment: .leading, spacing: 6) {
+                        HStack {
+                            Text(log.date, style: .date)
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                            Spacer()
+                            Text(log.date, style: .time)
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                        }
+
+                        HStack(spacing: 16) {
+                            Label("\(log.glucoseSynced) glucose", systemImage: "drop.fill")
+                                .foregroundStyle(.red)
+                            Label("\(log.insulinSynced) insulin", systemImage: "syringe.fill")
+                                .foregroundStyle(.blue)
+                            Label("\(log.carbsSynced) carbs", systemImage: "fork.knife")
+                                .foregroundStyle(.orange)
+                        }
+                        .font(.caption)
+
+                        if log.hasErrors {
+                            ForEach(log.errors, id: \.self) { error in
+                                Label(error, systemImage: "exclamationmark.triangle.fill")
+                                    .font(.caption)
+                                    .foregroundStyle(.red)
+                            }
+                        }
+                    }
+                    .padding(.vertical, 4)
+                }
+            }
+        }
+        .navigationTitle("Sync Logs")
     }
 }

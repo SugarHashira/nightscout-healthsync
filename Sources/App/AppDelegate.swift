@@ -39,7 +39,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
         let syncTask = Task {
             do {
-                try await SyncService.shared.syncAll()
+                _ = try await SyncService.shared.syncAll()
                 task.setTaskCompleted(success: true)
             } catch {
                 print("Background sync failed: \(error)")

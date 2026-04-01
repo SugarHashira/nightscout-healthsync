@@ -16,6 +16,7 @@
 		B8B558DA6492888AE6A2D492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B23C85692D97322CEFFCC45 /* AppDelegate.swift */; };
 		CED5249AA5686A6E8ECBEDA9 /* NightscoutHealthSyncApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F60B0EFC19D9EBC29E9463C /* NightscoutHealthSyncApp.swift */; };
 		DCC6E747CAF206047944CF7B /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B322BFB314FBBD8949C9EB71 /* UserSettings.swift */; };
+		8BB0B8B50F86483C81F552DF /* SyncLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F17FB94CCF429DBC2755B6 /* SyncLog.swift */; };
 		E67A18DBEA873662E77E8D9D /* GlucoseEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6CFB1EBBAD35978B578BC1 /* GlucoseEntry.swift */; };
 		E92163918EAA4FC91A6C5B68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A802251A99039903EE10439 /* ContentView.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		8D95F991ECBF4A7DB644023D /* NightscoutTreatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightscoutTreatment.swift; sourceTree = "<group>"; };
 		9A802251A99039903EE10439 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B322BFB314FBBD8949C9EB71 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		61F17FB94CCF429DBC2755B6 /* SyncLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncLog.swift; sourceTree = "<group>"; };
 		FA6CFB1EBBAD35978B578BC1 /* GlucoseEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 				515A8E4E670745DE468140DD /* NightscoutProfile.swift */,
 				8D95F991ECBF4A7DB644023D /* NightscoutTreatment.swift */,
 				B322BFB314FBBD8949C9EB71 /* UserSettings.swift */,
+				61F17FB94CCF429DBC2755B6 /* SyncLog.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				42204F9193867A7B933527BA /* SyncService.swift in Sources */,
 				60EC387E0E6D618A97129FCC /* SyncViewModel.swift in Sources */,
 				DCC6E747CAF206047944CF7B /* UserSettings.swift in Sources */,
+				8BB0B8B50F86483C81F552DF /* SyncLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
